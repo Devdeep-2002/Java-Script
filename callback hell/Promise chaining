@@ -1,0 +1,15 @@
+saveToDb("dev")
+.then(() => {
+    console.log(" data1 saved. promise was resolved");
+    return saveToDb("Gun");
+    })
+    .then(() => {
+        console.log(" data2 saved");
+        return saveToDb("fire");
+})
+.then(() => {
+    console.log("data3 saved");
+})
+.catch(() => {
+    console.log("promise was rejected");
+})
